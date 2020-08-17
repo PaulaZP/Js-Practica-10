@@ -2,7 +2,6 @@
 // Práctica 10 - Cronómetro
 //
 let time;
-let cont = 0;
 let hh = 0;
 let mm = 0;
 let ss = 0;
@@ -62,8 +61,12 @@ function detener(){
 
 function limpiar(){
     const limpia = document.getElementById('cronometro');
-    cont = '00:00:00'; // usar el contador para que no agarrerre el global es para que inicia utomaticamente en cero
+    let cont = '00:00:00'; 
+    hh = 0;
+    mm = 0;
+    ss = 0;
     limpia.innerHTML = cont; // ese contador lo que hace es guardarlo dentro de la variable limpia para que inicie nuevamente en cero
+
 }
 
 const botonIniciar = document.getElementById('iniciar');
